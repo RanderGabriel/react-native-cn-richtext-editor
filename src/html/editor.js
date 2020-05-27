@@ -170,7 +170,9 @@ const editorHTML = `
               else if(msgData.type === 'editor') {
                 switch (msgData.command) {
                 case 'focus':
-                  editor.focus();
+                  window.setTimeout(function () {
+                    editor.focus();
+                  }, 0);
                   break;
                 case 'blur':
                   editor.blur();
